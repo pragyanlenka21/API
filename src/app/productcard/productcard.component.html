@@ -1,0 +1,15 @@
+<div class="card h-100 shadow">
+    <img [src]="productdata.thumbnail" class="card-img-top product-img" alt="{{ productdata.title }}">
+
+    <div class="card-body">
+        <h6 class="card-title text-truncate">{{ productdata.title }}</h6>
+
+        <p class="fw-bold text-primary mb-2">
+            ${{ productdata.price }}
+        </p>
+
+        <button class="btn btn-primary btn-sm w-100" (click)="getdetails(productdata.id)">
+            View Details
+        </button>
+    </div>
+</div>

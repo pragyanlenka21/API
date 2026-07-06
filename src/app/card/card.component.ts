@@ -3,10 +3,11 @@ import { TestService } from '../common-service/test.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ProductcardComponent } from "../productcard/productcard.component";
 
 @Component({
   selector: 'app-card',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ProductcardComponent],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
