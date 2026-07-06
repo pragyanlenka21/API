@@ -1,0 +1,24 @@
+<div class="sidebar">
+    <ul>
+        <li>
+            <a routerLinkActive="Active" (click)="makeDashboard()" routerLink="forms">
+                dashbard
+            </a>
+        </li>
+        <li>
+            <a [ngClass]="{'Active': category == 'all'}" (click)="goToProductPage('all')">
+                product list
+            </a>
+        </li>
+    </ul>
+
+    <ul>
+
+        <li>
+            <a [ngClass]="{'Active': category == 'all'}" (click)="goToProductPage('all')">All</a>
+        </li>
+        <li *ngFor="let d of myData">
+            <a [ngClass]="{'Active': category == d.slug}" (click)="goToProductPage(d.slug)">{{d.name}}</a>
+        </li>
+    </ul>
+</div>

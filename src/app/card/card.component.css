@@ -12,3 +12,71 @@
     font-weight: bold;
     margin: 15px 0;
 }
+
+:root {
+    --neon: #e1ff00;
+  background: #000000;
+}
+
+.rfc-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.rfc-flux-node {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    perspective: 200px;
+}
+
+.rfc-ring {
+    position: absolute;
+    inset: 0;
+    border: 2px solid transparent;
+    border-top-color: var(--neon);
+    border-radius: 50%;
+    animation: rfc-flux-spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+.rfc-r1 {
+    border-top-color: var(--neon);
+    animation-delay: -0.45s;
+}
+
+.rfc-r2 {
+    border-top-color: #ffffff;
+    animation-delay: -0.3s;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+}
+
+.rfc-r3 {
+    border-top-color: #e0e0e0;
+    animation-delay: -0.15s;
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+}
+
+.rfc-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--neon);
+}
+
+@keyframes rfc-flux-spin {
+    0% { transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg); }
+    100% { transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg); }
+}

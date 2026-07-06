@@ -17,6 +17,7 @@ export class CardDetailsComponent {
   };
   constructor(private route: ActivatedRoute, private t: TestService) {
     this.id = this.route.snapshot.paramMap.get('id');
+    //snapshot is the curent route
   }
 
   ngOnInit(): void {
