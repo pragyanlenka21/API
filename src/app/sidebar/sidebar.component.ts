@@ -44,10 +44,8 @@ export class SidebarComponent {
 
   goToProductPage(name: any) {
     this.testService.getValueFromSidebar(name);
-    this.router.navigate([''])
+    this.router.navigate(['product-list'])
   }
 
-  makeDashboard(){
-    // this.category = '';
-  }
+  
 }

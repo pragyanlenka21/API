@@ -1,12 +1,12 @@
 <div class="sidebar">
     <ul>
         <li>
-            <a routerLinkActive="Active" (click)="makeDashboard()" routerLink="forms">
+            <a routerLinkActive="Active" routerLink="forms">
                 dashbard
             </a>
         </li>
         <li>
-            <a [ngClass]="{'Active': category == 'all'}" (click)="goToProductPage('all')">
+            <a routerLinkActive="Active" routerLink="product-list">
                 product list
             </a>
         </li>
